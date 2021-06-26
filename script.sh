@@ -6,7 +6,9 @@ sudo docker build --no-cache -t alekzander7c4/test_py .
 
 sudo docker run -dp 8888:5000 --net test_network --name srv-app-01 --rm alekzander7c4/test_py
 
-sudo docker run -dp 3306:3306 --net test_network --name srv-mysql-01 --rm -e MYSQL_ROOT_PASSWORD=pass123456 mysql
+#sudo docker run -dp 3306:3306 --net test_network --name srv-mysql-01 --rm -e MYSQL_ROOT_PASSWORD=pass123456 mysql:5.7
+
+sudo docker run -dp 3306:3306 --net test_network --name srv-mysql-01 --rm -e MYSQL_ROOT_PASSWORD=pass123456 mysql:latest --default-authentication-plugin=mysql_native_password
 
 
 
