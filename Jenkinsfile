@@ -4,8 +4,7 @@ pipeline {
         stage('Test') {
             steps {
 				echo '------------------start stage'
-				sh 'whoami'
-				sh 'hostname'
+
             }
         }
     }
